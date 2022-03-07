@@ -23,19 +23,46 @@
     <h2>
         <a id="what-is-qilin" class="anchor" href="#what-is-qilin" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is QiLin?</h2>
 
-    <p><a href="https://github.com/QiLinPTA/QiLin">QiLin</a> is a new pointer analysis framework for Java programs. QiLin supports fine-grained context-sensitivity (
-        where different variables/objects in a method can be analyzed under different context abstractions at the variable level), precisely, efficiently, and modularly. </p>
+    <p><a href="https://github.com/QiLinPTA/QiLin">QiLin</a> is a new pointer analysis framework designed for supporting fine-grained context-sensitivity 
+        for Java programs precisely, efficiently, and modularly. 
+        In QiLin, different variables/objects in a method can be analyzed under different context abstractions at the variable level, making the traditional 
+        method-level context-sensitivity as a special case. </p>
 
     <h2>
         <a id="what-kind-of-analyses-does-qilin-provide" class="anchor" href="#what-kind-of-analyses-does-qilin-provide" aria-hidden="true"><span class="octicon octicon-link"></span></a>What kind of analyses does QiLin provide?</h2>
-
+        QiLin's toolbox includes already a rich set of pointer analyses for supporting (1) <a href="https://link.springer.com/chapter/10.1007/3-540-36579-6_12"> <em>insens</em> </a> (Andersen's context-insensitive analysis), 
+    (2) all common flavors of method-level context-sensitivity as listed below:
     <ul>
-        <li>Precise Call graph construction for Java programs</li>
-        <li>Andersen's pointer analysis</li>
-        <li>All kinds of Method-level context-sensitive pointer analyses, e.g., <em>k</em>CFA, <em>k</em>OBJ, <em>k</em>Type, <em>k</em>Hybrid</li>
-        <li>Existing selective context-sensitive pointer analyses, e.g., Bean, Zipper, Mahjong, Eagle, Turner, Context-Tunneling, Data-Driven.</li>
+      <li>
+        <a href="https://www.cse.psu.edu/~trj1/cse598-f11/docs/sharir_pnueli1.pdf"><em>k<em>c</a>: <em>k<em>-callsite-sensitive pointer analysis (denoted <em>k<em>CFA).
+      </li>
+      <li>
+        <a href="https://dl.acm.org/doi/abs/10.1145/1044834.1044835"><em>k<em>o</a>: <em>k<em>-object-sensitive pointer analysis (denoted <em>k<em>OBJ).
+      </li>
+      <li>
+        <a href="https://dl.acm.org/doi/abs/10.1145/1926385.1926390"><em>k<em>t</a>: <em>k<em>-type-sensitive pointer analysis (denoted <em>k<em>TYPE).
+      </li>
+      <li>
+        <a href="https://dl.acm.org/doi/10.1145/2499370.2462191"><em>k<em>h</a>: hybrid <em>k<em>-object-sensitive pointer analysis.
+      </li>
     </ul>
-
+    and (3) many flavors of fine-grained context-sensitivity, enabled by different pre-analyses such as: 
+    <ul>
+      <li>
+        <a href="https://link.springer.com/chapter/10.1007/978-3-662-53413-7_24">B-2o</a>: BEAN-guided <em>2<em>-object-sensitive pointer analysis.
+      </li>
+      <li>
+        <a href="https://doi.org/10.1145/3062341.3062360">M-<em>k<em>o</a>: MAHJONG-guided <em>k<em>-object-sensitive pointer analysis.
+      </li>
+      <li>
+        <a href="https://dl.acm.org/doi/abs/10.1145/1926385.1926390"><em>k<em>t</a>: <em>k<em>-type-sensitive pointer analysis (denoted <em>k<em>TYPE).
+      </li>
+      <li>
+        <a href="https://dl.acm.org/doi/10.1145/2499370.2462191"><em>k<em>h</a>: hybrid <em>k<em>-object-sensitive pointer analysis.
+      </li>
+    </ul>
+            A full list of pointer analyses supported by QiLin can be found <a href="https://github.com/QiLinPTA/qilinpta.github.io/wiki/Full-list-of-PTAs">here</a>.
+     In addition, one can also use QiLin to construct callgraphs for Java programs.
     <h2>
         <a id="qilin-released-license" class="anchor" href="#qilin-released-license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License </h2>
 
